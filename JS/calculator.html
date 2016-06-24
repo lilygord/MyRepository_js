@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>Калькулятор</title>
+      <link rel="stylesheet" type="text/css" href="css.css">
+   </head>
+   <body>
+      <header>
+         <p class="logo"><img src="images/webLogo.png" alt="Изображение" height="100"></p>
+         <h1>Основы Web-технологий</h1>
+         <nav>
+            <ul class="menu-main">
+               <li><a href="index.html">Главная</a></li>
+               <li>
+                  <a href="technologies.html">Web-технологии</a> 
+                  <ul class="menu-submain">
+                     <li><a href="html5.html">HTML5</a></li>
+                     <li> <a href="css3.html">CSS3</a></li>
+                     <li><a href="javaScript.html">JavaScript</a></li>
+                  </ul>
+               </li>
+               <li><a href="calculator.html">Калькулятор</a></li>
+               <li><a href="test.html">Тест</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div>
+         <form name="calculator">
+            <table>
+               <tr>
+                  <td colspan="5"><input type="text" name="text" id="calc-input" />  </td>
+               </tr>
+               <tr>
+                  <td> <button type="button" value="7" id="butt7"> 7 </button> </td>
+                  <td> <button type="button" value="8" id="butt8"> 8 </button></td>
+                  <td> <button type="button" value="9" id="butt9"> 9 </button> </td>
+                  <td> <button type="button" value="/" id="but-divided"> / </button> </td>
+                  <td> <button type="button" value="C" id="clear"> C </button> </td>
+               </tr>
+               <tr>
+                  <td> <button type="button" value="4" id="butt4"> 4 </button> </td>
+                  <td> <button type="button" value="5" id="butt5"> 5 </button> </td>
+                  <td> <button type="button" value="6" id="butt6"> 6 </button> </td>
+                  <td> <button type="button" id="butt-mul"> * </button> </td>
+                  <td> <button type="button" id="butt-plusmn">&plusmn;</button> </td>
+               </tr>
+               <tr>
+                  <td> <button type="button" value="1" id="butt1"> 1 </button> </td>
+                  <td> <button type="button" value="2" id="butt2"> 2 </button> </td>
+                  <td> <button type="button" value="3" id="butt3"> 3 </button> </td>
+                  <td> <button type="button"  id="butt-minus"> - </button> </td>
+                  <td rowspan="2" id="sign-equally"> <button  type="button"> &#61; </button></td>
+               </tr>
+               <tr>
+                  <td colspan="2"> <button type="button" value="0" id="butt0"> 0 </button> </td>
+                  <td> <button type="button" value="." id="butt-comma"> . </button> </td>
+                  <td> <button type="button" id="butt-plus"> + </button> </td>
+               </tr>
+            </table>
+         </form>
+      </div>
+      <footer>
+         <address> 
+            <a href="mailto:mail@mail"> Пишите:mail@mail </a> 
+         </address>
+         &copy;Фамилия И.О.,год         
+      </footer>
+      <script src="calc.js"></script>
+   </body>
+</html>
