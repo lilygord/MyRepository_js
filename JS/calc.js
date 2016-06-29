@@ -60,14 +60,12 @@ butPoint.onclick = function(){
    }
 }
 butPlusMn.onclick = function(){
-    if (inp.value.charAt(0)!="-"){
-   inp.value = "-" + inp.value; 
-   } else {
-      inp.value = inp.value.substring(1); 
-      }
+    inp.value = inp.value * -1;
    }
 reset.onclick = function(){
     inp.value = "";
+    op="";
+    inpOne="";
    }
 butPlus.onclick = function(){
     inpOne = inp.value;
@@ -84,16 +82,15 @@ butMultiply.onclick = function(){
     inp.value = "";
     op = "multip";
    }
-
 butDivided.onclick = function(){
     inpOne = inp.value;
     inp.value = "";
     op = "divided";
    }
-    
-butSignEqually.onclick = function(){
+ butSignEqually.onclick = function(){
     if (op == "plus") {
-       inp.value = +inpOne + +inp.value;}
+       inp.value = +inpOne + +inp.value;
+       }
     if (op == "minus"){
       inp.value = inpOne - inp.value;
         }       
@@ -101,13 +98,16 @@ butSignEqually.onclick = function(){
        inp.value = inpOne * inp.value;
     }
     if(op == "divided"){
+       if(+inp.value == 0){ alert("На ноль делить нельзя");
+       }else {
        inp.value = inpOne / inp.value;
-       var a = 100 / 0;
-       if(a === Infinity){ alert("На ноль делить нельзя");
-      }
-   }
-
+       }
+ }
+    op="";
+    inpOne="";
 }
+
+
 
 
 
